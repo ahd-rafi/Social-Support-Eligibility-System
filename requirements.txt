@@ -1,0 +1,50 @@
+# Core Framework
+langgraph==0.2.16
+langchain==0.2.16
+langchain-core==0.2.38
+langchain-community==0.2.16
+
+# LLM Integration
+ollama==0.3.3
+
+# Database Drivers
+psycopg[binary]==3.2.1
+asyncpg==0.29.0
+pymongo==4.8.0
+qdrant-client==1.11.1
+neo4j==5.24.0
+
+# ML & Data Science
+scikit-learn==1.5.2
+numpy==1.26.4
+pandas==2.2.2
+sentence-transformers==3.0.1
+
+# Document Processing
+PyPDF2==3.0.1
+python-docx==1.1.2
+openpyxl==3.1.5
+Pillow==10.4.0
+pytesseract==0.3.13
+
+# API & Web
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+streamlit==1.38.0
+httpx==0.27.2
+python-multipart==0.0.9
+
+# Observability
+langfuse==2.48.1
+
+# Utilities
+pydantic==2.9.1
+pydantic-settings==2.5.2
+python-dotenv==1.0.1
+tenacity
+
+# Development
+pytest==8.3.3
+pytest-asyncio==0.24.0
+black==24.8.0
+ruff==0.6.7

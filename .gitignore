@@ -1,0 +1,73 @@
+# Environment
+.env
+.env.local
+*.env.backup
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Project specific
+uploads/*
+!uploads/.gitkeep
+models/*.joblib
+models/*.pkl
+!models/.gitkeep
+
+# Synthetic data (keep only sample)
+data/synthetic/output/*
+!data/synthetic/output/sample_application/
+!data/synthetic/output/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# Docker
+docker-compose.override.yml
+
+# Temporary files
+*.tmp
+*.bak
+.~*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

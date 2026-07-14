@@ -1,0 +1,3 @@
+@echo off
+echo Requesting Administrator privileges...
+PowerShell -Command "Start-Process PowerShell -ArgumentList '-ExecutionPolicy Bypass -File ""%~dp0enable_ollama_gpu.ps1""' -Verb RunAs"
