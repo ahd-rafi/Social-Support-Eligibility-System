@@ -155,7 +155,7 @@ An AI-powered system that:
 
 ## 🛠️ Technology Stack
 
-### Core Technologies (Mandated by Assessment)
+### Core Technologies
 
 | Category | Tool | Justification |
 |---|---|---|
@@ -364,16 +364,12 @@ Social-Support-Eligibility-System/
 │   │   └── llm.py           # LLM initialization
 │   ├── ml/                  # Machine learning
 │   │   ├── classifier.py    # HistGradientBoosting classifier
-│   │   ├── embeddings.py    # sentence-transformers wrapper
-│   │   └── features.py      # Feature engineering
+│   │   └── embeddings.py    # sentence-transformers wrapper
 │   ├── parsers/             # Document processing
 │   │   ├── ocr.py           # Tesseract wrapper + preprocessing
 │   │   ├── pdf.py           # PDF text extraction
-│   │   ├── router.py        # Document type detection
-│   │   ├── bank_statement.py
-│   │   ├── resume.py
-│   │   ├── credit_report.py
-│   │   └── assets_liabilities.py
+│   │   ├── excel.py         # Excel/XLSX parsing
+│   │   └── router.py        # Document type detection
 │   ├── db/                  # Database clients
 │   │   ├── postgres.py      # PostgreSQL async client
 │   │   ├── mongo.py         # MongoDB client
@@ -396,17 +392,19 @@ Social-Support-Eligibility-System/
 │   │   └── output/
 │   │       └── sample_application/  # Demo documents
 │   ├── programs/            # Enablement program descriptions
-│   ├── policies/            # Policy documents (RAG)
 │   └── seed.py              # Database seeding script
 ├── models/                  # Trained classifier artifacts
 │   └── .gitkeep
 ├── scripts/
 │   ├── train_classifier.py  # ML model training
 │   ├── verify_databases.py  # Connection verification
+│   ├── startup_check.ps1    # Pre-flight checklist
+│   ├── install_tesseract.ps1 # OCR setup automation
+│   ├── enable_ollama_gpu.ps1 # GPU configuration
+│   ├── init-langfuse-db.sql  # Langfuse DB initialization
 │   └── clear_database.py    # Reset for testing
 ├── tests/                   # Integration tests
 │   ├── test_e2e.py          # End-to-end workflow
-│   ├── test_agents.py       # Individual agent tests
 │   └── test_parsers.py      # Document parsing tests
 ├── docker-compose.dev.yml   # Development stack (DBs only)
 ├── docker-compose.yml       # Full stack (DBs + Langfuse)
@@ -661,9 +659,6 @@ pytest tests/ -v
 ```powershell
 # End-to-end workflow
 pytest tests/test_e2e.py -v
-
-# Individual agents
-pytest tests/test_agents.py -v
 
 # Document parsers
 pytest tests/test_parsers.py -v
